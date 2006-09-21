@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+ <HEAD>
+  <TITLE>TouchFreeze utility homepage</TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="keywords" content="windows laptop notebook touchpad brush problem touch pad finger typing typewriting">
+  <meta nane="robots" content="all">
+ </HEAD>
+<body>
+<h2>Why TouchFreeze?</h2>
+Annoyed when you are typing a document and accidentally the palm of
+your hand brushes the touchpad, changing the position of the cursor
+in your document or accidently clicking on an option. TouchFreeze
+is simple utility for Windows NT/2000/XP that solves this problem. It automaticly disables
+touchpad while you are typing text. Like <a href=http://www.linuxmanpages.com/man1/syndaemon.1.php>syndaemon</a> on x-windows. 
+
+<h2>Download</h2>
+For download TouchFreeze 1.0.2 <a href="TouchFreeze-1.0.2.msi">click here</a>
+
+<a name="donate">
+<h2>Donation</h2>
+TouchFreeze is freeware, but if you find it useful then any donations are welcome:
+
+<br><a href="https://order.kagi.com/?6FBAU">Donate through Kagi -- secure server
+<br><a href="http://order.kagi.com/?6FBAU">Donate through Kagi -- non-secure server
+</a>
+
+<p>
+For any questions and suggestions email me: <a href="mailto:touchfreeze  @chemodax.net">touchfreeze  @chemodax.net</a>
+</p>
+
+<font size=1>
+Copyright (C) 2005 Ivan Zhakov
+</font>
+</body>                      
+</HTML>ML>
