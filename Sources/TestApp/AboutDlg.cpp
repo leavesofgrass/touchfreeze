@@ -40,5 +40,12 @@ static BOOL CALLBACK AboutDlgProc(
 
 void ShowAboutDlg(HINSTANCE hInst, HWND hwnd)
 {
-    DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUT), hwnd, AboutDlgProc);
+    static BOOL isDialogVisible = FALSE;
+    
+    if ( isDialogVisible == FALSE )
+    {
+      isDialogVisible = TRUE;
+      DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUT), hwnd, AboutDlgProc);
+      isDialogVisible = FALSE;
+    }
 }
