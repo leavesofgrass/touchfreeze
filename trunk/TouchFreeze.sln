@@ -14,6 +14,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Setup", "Sources\Setup\Setu
 		{4634BC5A-B3FA-4CDC-AF76-6660B4C9D3CC} = {4634BC5A-B3FA-4CDC-AF76-6660B4C9D3CC}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TouchFreeze", "Sources\TouchFreeze2\touchfreeze.vcproj", "{EE2DD6FA-1800-49DC-ADC1-EE689EDAC7F4}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfiguration) = preSolution
 		Debug = Debug
@@ -32,6 +36,10 @@ Global
 		{D06AF7B4-CDC8-466F-BBAA-6BE87C78EE87}.Debug.Build.0 = Debug|Win32
 		{D06AF7B4-CDC8-466F-BBAA-6BE87C78EE87}.Release.ActiveCfg = Release|Win32
 		{D06AF7B4-CDC8-466F-BBAA-6BE87C78EE87}.Release.Build.0 = Release|Win32
+		{EE2DD6FA-1800-49DC-ADC1-EE689EDAC7F4}.Debug.ActiveCfg = Debug|Win32
+		{EE2DD6FA-1800-49DC-ADC1-EE689EDAC7F4}.Debug.Build.0 = Debug|Win32
+		{EE2DD6FA-1800-49DC-ADC1-EE689EDAC7F4}.Release.ActiveCfg = Release|Win32
+		{EE2DD6FA-1800-49DC-ADC1-EE689EDAC7F4}.Release.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		VisualSVN.WorkingCopyRoot = Sources
