@@ -51,8 +51,10 @@ BOOL CTouchFreezeWindow::Init()
   m_shni.ChangeIcon( m_hIconOFF );
   m_shni.ChangeTips( _T("TouchFreeze2") );
   
+  #ifndef _DEBUG
   m_hHookKeyboard = ::SetWindowsHookEx( WH_KEYBOARD_LL, KeyboardHookProc, hInstance, 0 );
   m_hHookMouse    = ::SetWindowsHookEx( WH_MOUSE_LL,    MouseHookProc,    hInstance, 0 );
+  #endif
   
   m_àboutDlg.Create( 0 );
   m_àboutDlg.ShowWindow( SW_SHOW );
