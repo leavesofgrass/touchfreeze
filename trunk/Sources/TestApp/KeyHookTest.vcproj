@@ -3,10 +3,10 @@
 	ProjectType="Visual C++"
 	Version="7.10"
 	Name="KeyHookTest"
-	SccProjectName="chmsubscc"
+	SccProjectName=""
 	SccAuxPath=""
-	SccLocalPath="."
-	SccProvider="MSSCCI:chmsubscc"
+	SccLocalPath=""
+	SccProvider=""
 	Keyword="MFCProj">
 	<Platforms>
 		<Platform
