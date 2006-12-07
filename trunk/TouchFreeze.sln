@@ -42,6 +42,7 @@ Global
 		{EE2DD6FA-1800-49DC-ADC1-EE689EDAC7F4}.Release.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = 
 		VisualSVN.WorkingCopyRoot = Sources
 	EndGlobalSection
 	GlobalSection(ExtensibilityAddIns) = postSolution
