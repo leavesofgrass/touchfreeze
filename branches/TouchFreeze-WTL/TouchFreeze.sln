@@ -1,0 +1,50 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HookDll", "Sources\HookDll\HookDll.vcproj", "{4634BC5A-B3FA-4CDC-AF76-6660B4C9D3CC}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KeyHookTest", "Sources\TestApp\KeyHookTest.vcproj", "{F23C403F-6B53-44EA-AE29-8DAF9446C71F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4634BC5A-B3FA-4CDC-AF76-6660B4C9D3CC} = {4634BC5A-B3FA-4CDC-AF76-6660B4C9D3CC}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Setup", "Sources\Setup\Setup.vcproj", "{D06AF7B4-CDC8-466F-BBAA-6BE87C78EE87}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F23C403F-6B53-44EA-AE29-8DAF9446C71F} = {F23C403F-6B53-44EA-AE29-8DAF9446C71F}
+		{4634BC5A-B3FA-4CDC-AF76-6660B4C9D3CC} = {4634BC5A-B3FA-4CDC-AF76-6660B4C9D3CC}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TouchFreeze", "Sources\TouchFreeze2\touchfreeze.vcproj", "{EE2DD6FA-1800-49DC-ADC1-EE689EDAC7F4}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{4634BC5A-B3FA-4CDC-AF76-6660B4C9D3CC}.Debug.ActiveCfg = Debug|Win32
+		{4634BC5A-B3FA-4CDC-AF76-6660B4C9D3CC}.Debug.Build.0 = Debug|Win32
+		{4634BC5A-B3FA-4CDC-AF76-6660B4C9D3CC}.Release.ActiveCfg = Release|Win32
+		{4634BC5A-B3FA-4CDC-AF76-6660B4C9D3CC}.Release.Build.0 = Release|Win32
+		{F23C403F-6B53-44EA-AE29-8DAF9446C71F}.Debug.ActiveCfg = Debug|Win32
+		{F23C403F-6B53-44EA-AE29-8DAF9446C71F}.Debug.Build.0 = Debug|Win32
+		{F23C403F-6B53-44EA-AE29-8DAF9446C71F}.Release.ActiveCfg = Release|Win32
+		{F23C403F-6B53-44EA-AE29-8DAF9446C71F}.Release.Build.0 = Release|Win32
+		{D06AF7B4-CDC8-466F-BBAA-6BE87C78EE87}.Debug.ActiveCfg = Debug|Win32
+		{D06AF7B4-CDC8-466F-BBAA-6BE87C78EE87}.Debug.Build.0 = Debug|Win32
+		{D06AF7B4-CDC8-466F-BBAA-6BE87C78EE87}.Release.ActiveCfg = Release|Win32
+		{D06AF7B4-CDC8-466F-BBAA-6BE87C78EE87}.Release.Build.0 = Release|Win32
+		{EE2DD6FA-1800-49DC-ADC1-EE689EDAC7F4}.Debug.ActiveCfg = Debug|Win32
+		{EE2DD6FA-1800-49DC-ADC1-EE689EDAC7F4}.Debug.Build.0 = Debug|Win32
+		{EE2DD6FA-1800-49DC-ADC1-EE689EDAC7F4}.Release.ActiveCfg = Release|Win32
+		{EE2DD6FA-1800-49DC-ADC1-EE689EDAC7F4}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = 
+		VisualSVN.WorkingCopyRoot = Sources
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
