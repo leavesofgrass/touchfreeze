@@ -133,7 +133,8 @@ LRESULT CALLBACK MainWindowProc(
         m_NotifyIcon.uFlags = NIF_ICON|NIF_MESSAGE|NIF_TIP;
         m_NotifyIcon.uCallbackMessage = wm_ShellNotify;
         m_NotifyIcon.uID = 1;                
-        _tcscpy(m_NotifyIcon.szTip, _T("TouchFreeze (Automatic mode)"));
+        _tcscpy(m_NotifyIcon.szTip, sizeof(m_NotifyIcon.szTip),
+			    _T("TouchFreeze (Automatic mode)"));
         Shell_NotifyIcon(NIM_ADD, &m_NotifyIcon);
         return 0;
 
