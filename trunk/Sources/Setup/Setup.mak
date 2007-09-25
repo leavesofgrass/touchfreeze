@@ -1,5 +1,9 @@
 .SUFFIXES: .wxs .wixobj
 
+WIX=..\..\ext\wix
+CANDLE=$(WIX)\candle.exe
+LIGHT=$(WIX)\light.exe
+
 !if "$(CFG)" == "Debug"
 OutDir=..\..\Executable\bin_dbg
 !elseif "$(CFG)" == "Release"
@@ -21,7 +25,7 @@ makedirs:
     @if not exist $(OutDir) mkdir $(OutDir)
 
 .wxs{$(IntDir)\}.wixobj: 
-    @candle -nologo -out $(IntDir)\ %s -dExecDir=$(OutDir) -dVERSION=1.0.3
+    $(CANDLE) -nologo -out $(IntDir)\ %s -dExecDir=$(OutDir) -dVERSION=1.0.3
 
 $(MSI): $(IntDir)\Setup.wixobj $(OutDir)\TouchFreeze.exe $(OutDir)\TouchFreeze.dll
-    @light -nologo -out $(MSI) $(IntDir)\Setup.wixobj
+    $(LIGHT) -nologo -out $(MSI) $(IntDir)\Setup.wixobj
