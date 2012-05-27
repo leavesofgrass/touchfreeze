@@ -130,6 +130,7 @@
         <Control Id="DonateText" Type="Text"
                  Text="Thanks for using [ProductName]. You can show your appreciation and support future development by donating!"
                  X="35" Y="140"  Width="300" Height="40"
+                 NoPrefix="yes"
                  />
         <Control Id="DonateButton" Type="PushButton" Text="Donate!"
                  X="275" Y="180"  Width="56" Height="17">

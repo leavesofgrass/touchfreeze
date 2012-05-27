@@ -43,7 +43,6 @@
     <!--END BUTTON TEXTS-->
 
     <Binary Id="SetupCA" SourceFile="$(var.ExecDir)\SetupCA.dll"/>
-    <CustomAction Id="SET_TARGETDIR"   Property="TARGETDIR"  Value="[ProgramFilesFolder]\[ProductName]" Execute="firstSequence" />
     <CustomAction Id="RunAfterInstall" FileKey="F_Exe" ExeCommand="load" Return="asyncNoWait"/>
     <CustomAction Id="UnloadTouchFreeze" FileKey="F_Exe" ExeCommand="unload" Return="ignore"/>
     <CustomAction Id="OpenDonatePage" BinaryKey="SetupCA" DllEntry="OpenDonatePage" />
@@ -105,8 +104,6 @@
       <!-- END FONT DEFINITION -->
 
       <InstallUISequence>
-        <Custom Action="SET_TARGETDIR" Before="CostInitialize">TARGETDIR=""</Custom>
-
         <Show Dialog="WelcomeDialog" After="MigrateFeatureStates" />
 
         <Show Dialog="ProgressDialog" After="WelcomeDialog" />
@@ -117,8 +114,6 @@
       </InstallUISequence>
 
       <AdminUISequence>
-        <Custom Action="SET_TARGETDIR" Before="CostInitialize">TARGETDIR=""</Custom>
-
         <Show Dialog="WelcomeDialog" After="CostFinalize" />
 
         <Show Dialog="ProgressDialog" After="WelcomeDialog" />
