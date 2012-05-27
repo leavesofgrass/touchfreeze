@@ -33,6 +33,16 @@
       </Dialog>
 
       <Dialog Id="InstallOptionsDialog" Width="370" Height="270" Title="[ProductName]" TrackDiskSpace="yes">
+        <Control Id="InstallType" Type="RadioButtonGroup" X="25" Y="70" Width="320" Height="40"
+                 Property="MSIINSTALLPERUSER">
+          <RadioButtonGroup Property="MSIINSTALLPERUSER">
+            <RadioButton Text="Install for current user only (recommended)" Value="1"
+                         X="0" Y="0" Width="320" Height="15"/>
+            <RadioButton Text="Install for all users (require Administrative permissions)" Value="2"
+                         X="0" Y="20" Width="320" Height="15"/>
+          </RadioButtonGroup>
+        </Control>
+
         <Control Id="Next" Type="PushButton" X="236" Y="243" Width="56" Height="17" Default="yes" Text="[Button_Next]">
           <Publish Event="NewDialog" Value="VerifyReadyDialog">1</Publish>
         </Control>
@@ -43,16 +53,6 @@
 
         <Control Id="Back" Type="PushButton" X="180" Y="243" Width="56" Height="17" Text="[Button_Back]">
           <Publish Event="NewDialog" Value="WelcomeDialog">1</Publish>
-        </Control>
-
-        <Control Id="InstallType" Type="RadioButtonGroup" X="25" Y="70" Width="320" Height="40"
-                 Property="MSIINSTALLPERUSER">
-          <RadioButtonGroup Property="MSIINSTALLPERUSER">
-            <RadioButton Text="Install for current user only (recommended)" Value="1"
-                         X="0" Y="0" Width="320" Height="15"/>
-            <RadioButton Text="Install for all users (require Administrative permissions)" Value="2"
-                         X="0" Y="20" Width="320" Height="15"/>
-          </RadioButtonGroup>
         </Control>
 
         <Control Id="BannerBitmap" Type="Bitmap" X="0" Y="0" Width="374" Height="44" FixedSize="yes" Text="banner.bmp" />
