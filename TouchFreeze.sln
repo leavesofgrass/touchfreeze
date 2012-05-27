@@ -1,17 +1,10 @@
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Studio 2005
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HookDll", "Sources\HookDll\HookDll.vcproj", "{4634BC5A-B3FA-4CDC-AF76-6660B4C9D3CC}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HookDll", "Sources\HookDll\HookDll.vcxproj", "{4634BC5A-B3FA-4CDC-AF76-6660B4C9D3CC}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KeyHookTest", "Sources\TestApp\KeyHookTest.vcproj", "{F23C403F-6B53-44EA-AE29-8DAF9446C71F}"
-	ProjectSection(ProjectDependencies) = postProject
-		{4634BC5A-B3FA-4CDC-AF76-6660B4C9D3CC} = {4634BC5A-B3FA-4CDC-AF76-6660B4C9D3CC}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KeyHookTest", "Sources\TestApp\KeyHookTest.vcxproj", "{F23C403F-6B53-44EA-AE29-8DAF9446C71F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Setup", "Sources\Setup\Setup.vcproj", "{D06AF7B4-CDC8-466F-BBAA-6BE87C78EE87}"
-	ProjectSection(ProjectDependencies) = postProject
-		{F23C403F-6B53-44EA-AE29-8DAF9446C71F} = {F23C403F-6B53-44EA-AE29-8DAF9446C71F}
-		{4634BC5A-B3FA-4CDC-AF76-6660B4C9D3CC} = {4634BC5A-B3FA-4CDC-AF76-6660B4C9D3CC}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Setup", "Sources\Setup\Setup.vcxproj", "{D06AF7B4-CDC8-466F-BBAA-6BE87C78EE87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
