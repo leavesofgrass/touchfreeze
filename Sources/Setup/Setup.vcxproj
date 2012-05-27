@@ -77,6 +77,10 @@
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Xsd Include="..\..\ext\wix\doc\wix.xsd" />
+    <Xsd Include="..\..\ext\wix\doc\wixloc.xsd" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
