@@ -61,6 +61,7 @@
   <ItemDefinitionGroup>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="Dialogs.wxs" />
     <None Include="Setup.mak" />
     <None Include="Setup.wxs">
       <FileType>XML</FileType>

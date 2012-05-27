@@ -27,5 +27,5 @@ makedirs:
 .wxs{$(IntDir)\}.wixobj: 
     $(CANDLE) -nologo -out $(IntDir)\ %s -dExecDir=$(OutDir) -dVERSION=1.0.3
 
-$(MSI): $(IntDir)\Setup.wixobj $(OutDir)\TouchFreeze.exe $(OutDir)\TouchFreeze.dll
-    $(LIGHT) -nologo -out $(MSI) $(IntDir)\Setup.wixobj
+$(MSI): $(IntDir)\Setup.wixobj $(IntDir)\Dialogs.wixobj $(OutDir)\TouchFreeze.exe $(OutDir)\TouchFreeze.dll
+    $(LIGHT) -nologo -out $(MSI) $(IntDir)\Setup.wixobj $(IntDir)\Dialogs.wixobj
