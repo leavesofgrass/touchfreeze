@@ -144,5 +144,6 @@
       <UpgradeVersion Minimum="0.0.0"
         IncludeMinimum="yes" IncludeMaximum="yes" />
     </Upgrade>
+    <UIRef Id="WixUI"/>
   </Product>
 </Wix>
