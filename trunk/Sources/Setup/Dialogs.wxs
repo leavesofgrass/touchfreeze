@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Wix xmlns='http://schemas.microsoft.com/wix/2003/01/wi'>
   <Fragment>
-    <UI>
+    <UI Id="WixUI">
       <!-- DIALOG DEFINITION -->
       <Dialog Id="WelcomeDialog" Width="370" Height="270" Title="[ProductName] [Setup]">
         <Control Id="Next" Type="PushButton" X="236" Y="243" Width="56" Height="17" Default="yes" Text="[Button_Next]">
@@ -126,6 +126,15 @@
           <Subscribe Event="SetProgress" Attribute="Progress" />
         </Control>
         <Control Id="StatusLabel" Type="Text" X="35" Y="100" Width="35" Height="10" Text="Status:" />
+
+        <Control Id="DonateText" Type="Text"
+                 Text="Thanks for using [ProductName]. You can show your appreciation and support future development by donating!"
+                 X="35" Y="140"  Width="300" Height="40"
+                 />
+        <Control Id="DonateButton" Type="PushButton" Text="Donate!"
+                 X="275" Y="180"  Width="56" Height="17">
+         <Publish Event="DoAction" Value="OpenDonatePage">1</Publish>
+        </Control>
       </Dialog>
 
       <Dialog Id="CancelDialog" Width="260" Height="85" Title="[ProductName] [Setup]" NoMinimize="yes">
@@ -209,6 +218,18 @@
             Transparent="yes" NoPrefix="yes">
           <Text>Click the Finish button to exit.</Text>
         </Control>
+
+        <Control Id="DonateText" Type="Text"
+                 Text="Thanks for using [ProductName]. You can show your appreciation and support future development by donating!"
+                 X="135" Y="100"  Width="220" Height="60"
+                 Transparent="yes"
+                 NoPrefix="yes"
+                 />
+        <Control Id="DonateButton" Type="PushButton" Text="Donate!"
+                 X="300" Y="140"  Width="56" Height="17">
+          <Publish Event="DoAction" Value="OpenDonatePage">1</Publish>
+        </Control>
+
         <Control Id="Title" Type="Text" X="135" Y="20" Width="220" Height="60" Transparent="yes" NoPrefix="yes">
           <Text>[BigFont]Completing the [ProductName] installation.</Text>
         </Control>
