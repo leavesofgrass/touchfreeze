@@ -25,7 +25,7 @@ makedirs:
     @if not exist $(OutDir) mkdir $(OutDir)
 
 .wxs{$(IntDir)\}.wixobj: 
-    $(CANDLE) -nologo -out $(IntDir)\ %s -dExecDir=$(OutDir) -dVERSION=1.0.3
+    $(CANDLE) -nologo -out $(IntDir)\ %s -dExecDir=$(OutDir) -dVERSION=1.1.0
 
 $(MSI): $(IntDir)\Setup.wixobj $(IntDir)\Dialogs.wixobj $(OutDir)\TouchFreeze.exe $(OutDir)\TouchFreeze.dll
     $(LIGHT) -nologo -out $(MSI) $(IntDir)\Setup.wixobj $(IntDir)\Dialogs.wixobj
