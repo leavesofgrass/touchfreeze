@@ -1,0 +1,3 @@
++ setup
+- Donate paypal
+- Aboutbox at first run
