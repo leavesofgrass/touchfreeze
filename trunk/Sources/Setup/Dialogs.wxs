@@ -319,7 +319,7 @@
         <Control Id="BannerLine" Type="Line" X="0" Y="44" Width="370" Height="2" TabSkip="no" />
         <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="2" TabSkip="no"  />
         <Control Id="Description" Type="Text" X="20" Y="23" Width="280" Height="20" Transparent="yes" NoPrefix="yes" Text="Some files that need to be updated are currently in use." />
-        <Control Id="Title" Type="Text" X="15" Y="6" Width="200" Height="15" Transparent="yes" NoPrefix="yes" Text="{\WixUI_Font_Title}Files in Use" />
+        <Control Id="Title" Type="Text" X="15" Y="6" Width="200" Height="15" Transparent="yes" NoPrefix="yes" Text="[BigFont]Files in Use" />
         <Control Id="List" Type="ListBox" X="20" Y="87" Width="330" Height="130" Property="FileInUseProcess" Sunken="yes" TabSkip="yes" />
       </Dialog>
       <!-- END DIALOG DEFINITION -->
