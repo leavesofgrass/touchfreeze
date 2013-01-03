@@ -70,7 +70,7 @@ static BOOL IsAutorun()
     HKEY  regKey;
     TCHAR moduleFileName[_MAX_PATH];
     TCHAR regFileName   [_MAX_PATH];
-            
+
     GetModuleFileName(g_hInst, moduleFileName, _MAX_PATH);
 
     // Create provider key
