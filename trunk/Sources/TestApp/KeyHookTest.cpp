@@ -209,6 +209,8 @@ int WINAPI _tWinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPTSTR lpCmdLine, int
         return 0;
     }
 
+    MSG msg;
+    PeekMessage(&msg, NULL, WM_USER, WM_USER, PM_NOREMOVE);
 
     WNDCLASSEX wndClass;
     ZeroMemory(&wndClass, sizeof(wndClass));
@@ -230,7 +232,6 @@ int WINAPI _tWinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPTSTR lpCmdLine, int
 
     TFHookInstall(hwnd);
 
-    MSG msg;
     while( GetMessage( &msg, NULL, 0, 0 ))
     { 
         TranslateMessage(&msg); 
