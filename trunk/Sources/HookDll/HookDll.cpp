@@ -95,6 +95,7 @@ static bool IsBlockMouseMessage(UINT msg)
 {
     static UINT ignoreMsgs[] = {
         WM_LBUTTONDOWN,   WM_MBUTTONDOWN,   WM_RBUTTONDOWN,
+        WM_LBUTTONUP,     WM_MBUTTONUP,     WM_RBUTTONUP,
         WM_LBUTTONDBLCLK, WM_MBUTTONDBLCLK, WM_RBUTTONDBLCLK,
     };
    
