@@ -42,7 +42,7 @@ static void SetAutorun(BOOL autoRun)
 {
     HKEY  regKey;
     TCHAR moduleFileName[_MAX_PATH];
-            
+
     GetModuleFileName(g_hInst, moduleFileName, _MAX_PATH);
 
     // Create provider key
@@ -135,7 +135,7 @@ LRESULT CALLBACK MainWindowProc(
     case WM_DESTROY:
         Shell_NotifyIcon(NIM_DELETE, &m_NotifyIcon);
         return 0;
- 
+
     case WM_COMMAND:
         switch(LOWORD(wParam))
         {
@@ -218,7 +218,7 @@ int WINAPI _tWinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPTSTR lpCmdLine, int
     if (!hwnd)
         return -2;
 
-    TFHookInstall(hwnd);	
+    TFHookInstall(hwnd);
 
     MSG msg;
     while( GetMessage( &msg, NULL, 0, 0 ))
