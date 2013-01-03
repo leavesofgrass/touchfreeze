@@ -18,6 +18,10 @@ HICON          g_hIcon;
 
 HINSTANCE      g_hInst = NULL;
 
+const int IDT_HIDE_BALLOON  = 1;
+DWORD g_HideBalloonTime = 0;
+const int g_BalloonTimeout = 700; // 700 ms
+
 static LONG RegSetStringValue(HKEY hKey, LPCTSTR valueName, LPCTSTR value)
 {
     return ::RegSetValueEx(hKey, valueName, 0, REG_SZ,
@@ -135,6 +139,22 @@ static void ShowBallon(HWND hwnd, UINT id)
     Shell_NotifyIcon(NIM_MODIFY, &notify);
 }
 
+static void HideBalllon(HWND hwnd, UINT id)
+{
+    NOTIFYICONDATA notify;
+    ZeroMemory(&notify, sizeof(notify));
+    notify.cbSize = NOTIFYICONDATA_V2_SIZE;
+    notify.hWnd = hwnd;
+    notify.uID = id;
+    notify.uFlags = NIF_INFO;
+    notify.uTimeout = g_BalloonTimeout;
+    notify.dwInfoFlags = NIIF_NONE | NIIF_NOSOUND;
+    _tcscpy_s(notify.szInfo, _T(""));
+    _tcscpy_s(notify.szInfoTitle, _T(""));
+
+    Shell_NotifyIcon(NIM_MODIFY, &notify);
+}
+
 LRESULT CALLBACK MainWindowProc(
    HWND hWnd,
    UINT uMsg,
@@ -159,6 +179,18 @@ LRESULT CALLBACK MainWindowProc(
 
     case WM_DESTROY:
         Shell_NotifyIcon(NIM_DELETE, &m_NotifyIcon);
+        return 0;
+
+    case WM_TIMER:
+        if (wParam == IDT_HIDE_BALLOON)
+        {
+            if (GetTickCount() > g_HideBalloonTime)
+            {
+                g_HideBalloonTime = 0;
+                KillTimer(hWnd, IDT_HIDE_BALLOON);
+                HideBalllon(hWnd, 1);
+            }
+        }
         return 0;
 
     case WM_COMMAND:
@@ -194,6 +226,12 @@ LRESULT CALLBACK MainWindowProc(
     if (uMsg == wm_KBHookNotify)
     {
         ShowBallon(hWnd, 1);
+
+        g_HideBalloonTime = GetTickCount() + g_BalloonTimeout;
+
+        KillTimer(hWnd, IDT_HIDE_BALLOON);
+        SetTimer(hWnd, IDT_HIDE_BALLOON, g_BalloonTimeout, NULL);
+
         return 0;
     }
     else if (uMsg == wm_ShellNotify)
