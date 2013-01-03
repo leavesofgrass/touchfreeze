@@ -120,6 +120,21 @@ static void ShowContextMenu(HWND hwnd)
     DestroyMenu(hMenu);
 }
 
+static void ShowBallon(HWND hwnd, UINT id)
+{
+    NOTIFYICONDATA notify;
+    ZeroMemory(&notify, sizeof(notify));
+    notify.cbSize = NOTIFYICONDATA_V2_SIZE;
+    notify.hWnd = hwnd;
+    notify.uID = id;
+    notify.uFlags = NIF_INFO|NIF_REALTIME | NIIF_RESPECT_QUIET_TIME;
+    notify.uTimeout = 1000;
+    notify.dwInfoFlags = NIIF_NONE | NIIF_NOSOUND;
+    _tcscpy_s(notify.szInfo, _T("Touch blocked!"));
+
+    Shell_NotifyIcon(NIM_MODIFY, &notify);
+}
+
 LRESULT CALLBACK MainWindowProc(
    HWND hWnd,
    UINT uMsg,
@@ -178,6 +193,7 @@ LRESULT CALLBACK MainWindowProc(
 
     if (uMsg == wm_KBHookNotify)
     {
+        ShowBallon(hWnd, 1);
         return 0;
     }
     else if (uMsg == wm_ShellNotify)
