@@ -42,12 +42,17 @@ static void SetAutorun(BOOL autoRun)
 {
     HKEY  regKey;
     TCHAR moduleFileName[_MAX_PATH];
+    DWORD rv;
 
-    GetModuleFileName(g_hInst, moduleFileName, _MAX_PATH);
+    rv = GetModuleFileName(g_hInst, moduleFileName, _MAX_PATH);
+    if (rv != ERROR_SUCCESS)
+    {
+        return ;
+    }
 
     // Create provider key
-    if (RegCreateKey(HKEY_CURRENT_USER, AUTORUN_KEY, &regKey) 
-        != ERROR_SUCCESS)
+    rv = RegCreateKey(HKEY_CURRENT_USER, AUTORUN_KEY, &regKey);
+    if (rv != ERROR_SUCCESS)
     {
         return ;
     }
