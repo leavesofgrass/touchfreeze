@@ -70,8 +70,13 @@ static BOOL IsAutorun()
     HKEY  regKey;
     TCHAR moduleFileName[_MAX_PATH];
     TCHAR regFileName   [_MAX_PATH];
+    DWORD rv;
 
-    GetModuleFileName(g_hInst, moduleFileName, _MAX_PATH);
+    rv = GetModuleFileName(g_hInst, moduleFileName, _MAX_PATH);
+    if (rv != ERROR_SUCCESS)
+    {
+        return FALSE;
+    }
 
     // Create provider key
     if (RegOpenKeyEx(HKEY_CURRENT_USER, AUTORUN_KEY, 0, KEY_ALL_ACCESS, &regKey) 
