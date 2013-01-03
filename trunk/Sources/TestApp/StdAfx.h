@@ -1,7 +1,7 @@
 #pragma once
 
 #define WINVER 0x0500
-#define _WIN32_IE 0x0500
+#define _WIN32_IE 0x0501
 
 #define STRICT
 
