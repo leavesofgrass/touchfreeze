@@ -134,7 +134,7 @@ static void ShowBallon(HWND hwnd, UINT id)
     notify.uFlags = NIF_INFO|NIF_REALTIME | NIIF_RESPECT_QUIET_TIME;
     notify.uTimeout = 1000;
     notify.dwInfoFlags = NIIF_NONE | NIIF_NOSOUND;
-    _tcscpy_s(notify.szInfo, _T("Touch blocked!"));
+    _tcscpy_s(notify.szInfo, _T("Tap blocked!"));
 
     Shell_NotifyIcon(NIM_MODIFY, &notify);
 }
