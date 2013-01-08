@@ -1,3 +1,4 @@
+// Copyright (C) 2007-2013 Ivan Zhakov.
 #pragma once
 
 #define WINVER 0x0500

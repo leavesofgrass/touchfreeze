@@ -1,3 +1,4 @@
+// Copyright (C) 2007-2013 Ivan Zhakov.
 #pragma once
 
 static LPCTSTR WINDOW_CLASS_NAME = _T("TouchFreezeWindowClass"); 
