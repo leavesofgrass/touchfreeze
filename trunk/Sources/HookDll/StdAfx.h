@@ -8,8 +8,3 @@
 #include <windows.h>
 #include <string.h>
 #include <tchar.h>
-
-#pragma warning(disable: 4786)
-#include <list>
-#include <vector>
-#include <map>
